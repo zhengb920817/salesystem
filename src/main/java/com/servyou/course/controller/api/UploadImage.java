@@ -39,7 +39,7 @@ public class UploadImage {
 		try {
 			file.transferTo(new File(saveDirectory, saveFileName));
 			return true;
-		} catch (IllegalStateException | IOException e) {
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
