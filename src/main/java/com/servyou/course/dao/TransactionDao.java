@@ -22,7 +22,7 @@ public interface TransactionDao {
 			+ " buyNum = #{buyNum}"
 			+ " where id = #{txId}")
 	public void updateTransaction(@Param("txId") int txId, Transaction transaction);
-
+	//删除交易
 	@Delete("delete from trx where id = #{transactionId}")
 	public void deleteTransaction(@Param("transactionId") int transactionId);
 	
@@ -36,7 +36,7 @@ public interface TransactionDao {
 	@Select("select buyNum from trx where personId = #{pId} and contentId = #{cId} ")
 	@Result(javaType = Integer.class)
 	public int getBuyNum(@Param("pId") int userId, @Param("cId") int contentId);
-	
+	//获取已售出的产品列表
 	@Select("select trx.contentId as id, trx.price as buyPrice, trx.time as buyTime ,"
 			+ " cont.title as title,cont.icon as image,cont.abstract as summary, cont.text as detail "
 			+ " from trx left join content cont on trx.contentId = cont.id order by id asc")

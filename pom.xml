@@ -170,7 +170,7 @@
 					<showDeprecation>false</showDeprecation>
 				</configuration>
 			</plugin>
-			<!-- 
+			
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
@@ -183,8 +183,7 @@
 					<server>tomcat</server>
 				</configuration>
 			</plugin>
-			-->
-			 
+			<!-- 
 				<plugin>
                     <groupId>org.apache.tomcat.maven</groupId>
                     <artifactId>tomcat7-maven-plugin</artifactId>
@@ -193,7 +192,7 @@
                         <path>/${project.build.finalName}</path>
                     </configuration>
                 </plugin>
-                
+                 -->
 		</plugins>
 	</build>
 

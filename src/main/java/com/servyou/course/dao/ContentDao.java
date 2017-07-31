@@ -15,7 +15,7 @@ public interface ContentDao {
 			+ "#{text})")
 	public void addPoduct(Content content);
 
-	@Update("update content set price = #{price}, title = #{title}, abstract = #{contentAbstract}, text=#{text} "
+	@Update("update content set price = #{price}, title = #{title},icon = #{icon},abstract = #{contentAbstract}, text=#{text} "
 			+ " where id = #{id}")
 	public void updateProduct(Content newContent);
 	
@@ -32,6 +32,6 @@ public interface ContentDao {
 	@Delete("DELETE from content WHERE id = #{contId} ")
 	public void deleteContentById(@Param("contId") int id);
 	
-	@Select("select count(*) from content where id = #{pId}")
-	public boolean existContent(@Param("pId") int contentId);
+	@Select("select count(*) from content where id = #{contId}")
+	public boolean existContent(@Param("contId") int contentId);
 }
